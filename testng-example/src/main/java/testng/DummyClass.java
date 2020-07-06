@@ -1,5 +1,5 @@
 package testng;
 
-public class DummyClasss {
+public class DummyClass {
 
 }
