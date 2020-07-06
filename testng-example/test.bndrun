@@ -1,0 +1,29 @@
+-tester: biz.aQute.tester.junit-platform
+
+-runfw: org.eclipse.osgi
+-resolve.effective: active
+-runproperties: \
+	osgi.console=,\
+	osgi.console.builtin.enable=false
+	
+-runrequires: \
+	bnd.identity;id='${project.artifactId}-tests',\
+	bnd.identity;id='junit-platform-launcher',\
+	bnd.identity;id='testng-junit5',\
+	bnd.identity;id='testng-example-tests',\
+	bnd.identity;id='jcommander'
+
+-runbundles: \
+	jcommander;version='[1.72.0,1.72.1)',\
+	junit-platform-commons;version='[1.6.2,1.6.3)',\
+	junit-platform-engine;version='[1.6.2,1.6.3)',\
+	junit-platform-launcher;version='[1.6.2,1.6.3)',\
+	org.opentest4j;version='[1.2.0,1.2.1)',\
+	org.testng;version='[7.0.0,7.0.1)',\
+	testng-example;version='[0.9.0,0.9.1)',\
+	testng-example-tests;version='[0.9.0,0.9.1)',\
+	testng-junit5;version='[0.0.2,0.0.3)'
+	
+-runstartlevel: \
+    order=sortbynameversion,\
+    begin=-1
